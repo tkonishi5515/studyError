@@ -1,0 +1,38 @@
+<template>
+  <lightning-card variant="narrow" icon-name="standard:contact" title="Hello">
+    <p>電話番号が空の場合、Apexトリガーにてエラーが返却されます。</p>
+    <lightning-record-edit-form object-api-name="Contact">
+      <lightning-input-field
+        field-name="FirstName"
+        data-id="contactField"
+        name="FirstName"
+      >
+      </lightning-input-field>
+      <lightning-input-field
+        field-name="LastName"
+        data-id="contactField"
+        name="LastName"
+      >
+      </lightning-input-field>
+      <lightning-input-field
+        field-name="Phone"
+        data-id="contactField"
+        name="Phone"
+      >
+      </lightning-input-field>
+      <lightning-input-field
+        field-name="AccountId"
+        value={recordId}
+        data-id="contactField"
+        name="AccountId"
+      >
+      </lightning-input-field>
+      <lightning-button
+        type="submit"
+        label="Create Contact"
+        onclick={createContact}
+      >
+      </lightning-button>
+    </lightning-record-edit-form>
+  </lightning-card>
+</template>
