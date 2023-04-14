@@ -1,6 +1,9 @@
 <template>
   <lightning-card variant="narrow" icon-name="standard:contact" title="Hello">
-    <p>電話番号が空の場合、Apexトリガーにてエラーが返却されます。</p>
+    <p>
+      電話番号が空のまま「create
+      contact」ボタンを押下すると、Apexトリガーにてエラーが返却されます。
+    </p>
     <lightning-record-edit-form object-api-name="Contact">
       <lightning-input-field
         field-name="LastName"
